@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://u8bsfwctc750"]
+
+[ext_resource type="PackedScene" uid="uid://crl4v5xkqqqc5" path="res://Unit.tscn" id="1_j1vgr"]
+
+[node name="Level" type="Node"]
+
+[node name="Services" type="Node" parent="."]
+
+[node name="Environments" type="Node2D" parent="."]
+
+[node name="Combatants" type="Node2D" parent="."]
+
+[node name="Player Combatant Group" type="Node2D" parent="Combatants"]
+
+[node name="Unit" parent="Combatants/Player Combatant Group" instance=ExtResource("1_j1vgr")]
+
+[node name="Enemy Combatant Group" type="Node2D" parent="Combatants"]
+
+[node name="Unit" parent="Combatants/Enemy Combatant Group" instance=ExtResource("1_j1vgr")]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
